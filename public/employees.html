@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" href="./employees_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+
+    <!-- Nav bar secton -->
+    <div class="navbar" id="nav">
+        <div class="logo_section" id="logo">
+            <h2>EmployeeTrack</h2>
+        </div>
+
+        <div class="headings_section" id="headings">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-border-all"></i></a><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i></a><a href="./employees.html">Employees</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-lines"></i></a><a href="./report.html">Reports</a></li>
+            </ul>
+        </div>
+
+        <div class="profile_exit_section" id="right_section">
+            <button><a href="#"><i class="fa-solid fa-user"></i></a></button>
+            <button><a href="#"><i class="fa-solid fa-right-from-bracket"></i></a></button>
+        </div>
+
+     </div> 
+
+    <!------------     Recent attendance list of Employees     --------->
+    
+    <div class="employee_heading">
+        <h2>Employees</h2>
+        <button id="employee_heading_add_employee_button">Add Employee</button>
+    </div>
+
+    <div id="recent_attendance">
+
+       
+
+        <div id="recent_attendance_heading">
+            <h3>Employee Directory</h3>
+            <p>View and manage employee information</p>
+
+        </div>
+
+
+        <div id="recent_attendance_filter">
+            <div id="search_filter">
+                <input type="text" name="" placeholder="Search employees..." id="search_employee">
+                <button id="search_filter_search_btn_employee_directory">Search</button>
+            </div>
+        </div>
+
+
+
+        <div id="employee_info_directory">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Position</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="employee_info_directory_body">
+                    <tr>
+                        <td>John Smith</td>
+                        <td>Engineering</td>
+                        <td>Software Developer</td>
+                        <td>john.smith@company.com</td>
+                        <td>Actions</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="all_records">
+            <button id="view_all_records_btn">View All Records</button>
+
+        </div>
+
+    </div>
+
+         <!-----------------------------Add employee popup modal------------------------------>
+
+    <div class="container" id="popup_overlay">
+        <div id="popup_box" class="sub_container">
+            <div class="main_heading">
+                <div class="main_heading_1">
+                    <h3>Add New Employee</h3>
+                    <p>Enter the details of the new Employee</p>
+                </div>
+
+                <div class="main_heading_2">
+                    <div class="close_popup">
+                        <i  id="closePopup" class="fa-solid fa-xmark"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="form">
+                <div class="full_name_container common">
+                    <div class="full_name_container_heading">
+                        <h4>Full Name</h4>
+
+                    </div>
+
+                    <div class="full_name_container_input">
+                        <input type="text" name="" id="name" placeholder="John Smith">
+
+                    </div>
+                </div>
+
+
+
+                 <div class="email_container common">
+                    <div class="email_container_heading">
+                        <h4>Email</h4>
+
+                    </div>
+
+                    <div class="email_container_input">
+                        <input type="email" name="" id="email" placeholder="johnsmith.emp@company.com">
+
+                    </div>
+                </div>
+
+
+
+                 <div class="position_container common">
+                    <div class="position_container_heading">
+                        <h4>Position</h4>
+
+                    </div>
+
+                    <div class="position_container_input">
+                        <input type="text" name="" id="position" placeholder="Software Developer">
+
+                    </div>
+                </div>
+
+
+
+                 <div class="department_container common">
+                    <div class="department_container_heading">
+                        <h4>Department</h4>
+
+                    </div>
+
+                    <div class="department_container_input">
+                        <input type="text" name="" id="department" placeholder="Engineering">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="add_employee_btn">
+                    <button id="add_btn">Add Employee</button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>

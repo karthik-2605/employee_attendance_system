@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="stylesheet" href="./report_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+
+    <!-- Nav bar secton -->
+    <div class="navbar" id="nav">
+        <div class="logo_section" id="logo">
+            <h2>EmployeeTrack</h2>
+        </div>
+
+        <div class="headings_section" id="headings">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-border-all"></i></a><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i></a><a href="./employees.html">Employees</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-lines"></i></a><a href="./report.html">Reports</a></li>
+            </ul>
+        </div>
+
+        <div class="profile_exit_section" id="right_section">
+            <button><a href="#"><i class="fa-solid fa-user"></i></a></button>
+            <button><a href="#"><i class="fa-solid fa-right-from-bracket"></i></a></button>
+        </div>
+
+     </div> 
+
+
+
+
+     <!------------     Report Section    ------------>
+     <div class="report_section">
+        <div class="report_section_heading">
+            <h2>Reports</h2>
+        </div>
+
+        <div class="report_section_main">
+            <div class="report_section1">
+                <div class="report_section1_heading">
+                    <h3>Generate Reports</h3>
+                    <p>Create and export attendance and employee reports</p>
+
+                </div>
+
+                <div class="report_section1_reportType">
+                    <h4>Report Type</h4>
+                    <div class="report_section1_reportType_buttons">
+                        <button id="report_sec1_btn_active">Attendance Report</button>
+                        <button>Employee Report</button>
+                    </div>
+
+                </div>
+
+
+                <div class="period_exportFormat">
+                    <div class="period_section">
+                        <h4>Period</h4>
+                        <div class="period_section_dropdown">
+                            <select name="" id="period">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="custom">Custom Rnage</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="exportFormat_section">
+                        <h4>Export Format</h4>
+                        <div class="exportFormat_section_dropdown">
+                            <select name="" id="exportFormat">
+                                <option value="Excel">Excel</option>
+                                <option value="pdf">PDF</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="start_end_date">
+                    <div class="start_date_section">
+                        <h4>Start Date</h4>
+                        <input type="date" name="" id="datePicker">
+
+                    </div>
+
+
+                    <div class="end_date_section">
+                        <h4>End Date</h4>
+                        <input type="date" name="" id="datePicker">
+
+                    </div>
+
+                </div>
+
+
+                <div class="generate_section">
+                    <button><i class="fa-solid fa-download"></i>Generate and Download Report</button>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="report_section2">
+                <div class="report_section2_heading">
+                    <h3>Popular Reports</h3>
+                    <p>Quick access to commonly used reports</p>
+                </div>
+
+                <div class="report_section2_main">
+                    <div class="report_sec1">
+                        <div class="report_sec1_heading">
+                            <h3>Monthly Attendance Summary</h3>
+                            <p>Overview of attendance patterns for the current month</p>
+
+                        </div>
+
+                        <div class="report_sec1_button">
+                            <button id="sec1_btn">Export</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="report_sec2">
+                        <div class="report_sec2_heading">
+                            <h3>Department Performance</h3>
+                            <p>Attendance statistics broken down by department</p>
+
+                        </div>
+
+                        <div class="report_sec2_button">
+                            <button id="sec2_btn">Export</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="report_sec3">
+                        <div class="report_sec3_heading">
+                            <h3>Employee Attendence Details</h3>
+                            <p>Individual employee attendance records and statistics</p>
+
+                        </div>
+
+                        <div class="report_sec3_button">
+                            <button id="sec3_btn">Export</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+     </div>
+
+
+
+      <!------------     Recent attendance list of Employees     --------->
+
+
+      <div id="recent_attendance">
+        <div id="recent_attendance_heading">
+            <h3>Recent Attendance</h3>
+
+        </div>
+
+
+        <div id="recent_attendance_filter">
+            <div id="search_filter">
+                <input type="text" name="" placeholder="Search employees or departments..." id="search_employee">
+                <select name="" id="search_filter_options">
+                    <option value="all">All</option>
+                    <option value="present">Present</option>
+                    <option value="late">Late</option>
+                    <option value="absent">Absent</option>
+                    <option value="half_day">Half Day</option>
+                </select>
+            </div>
+
+            <div class="export_pdf_excel">
+                <button id="export_btn"><i class="fa-solid fa-download"></i>Export</button>
+            </div>
+        </div>
+
+
+
+        <div id="employee_info">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Date</th>
+                        <th>Check In</th>
+                        <th>Check Out</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>02 May 2025</td>
+                        <td>9:54 AM</td>
+                        <td>5:14 PM</td>
+                        <td>
+                            <div class="status_cell">
+                                <div class="status_cell_color">
+
+                                </div>
+
+                                <span>Late</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="all_records">
+            <button id="view_all_records_btn">View All Records</button>
+
+        </div>
+
+     </div>
+
+
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f9fafb;
+    font-family: ui-sans-serif;
+}
+
+
+#nav{
+    background-color: #ffff;
+    width: 100%;
+    height: 4rem;
+    box-shadow: 0px 0.1px #64748b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #006fff;
+}
+
+#logo{
+    padding: 0 5rem;
+    cursor: pointer;
+}
+
+#headings{
+    width: 80%;
+    color: black;
+}
+
+#headings ul{
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+#headings ul li{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 10px;
+    transition: 0.3s ease-in-out;
+    padding:13px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#headings ul li:hover{
+    background-color: #f59e0b;
+}
+
+#headings ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16.5px;
+
+}
+
+#right_section{
+    padding: 0 5rem 0 0;
+    display: flex;
+    gap: 20px;
+}
+
+#right_section button{
+    font-size: 0.9rem;
+    padding: 15px 17px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f9fafb;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 2px solid #f9fafb;
+}
+
+#right_section button:hover{
+    background-color: #f59e0b;
+}
+
+
+
+
+
+
+
+/********************   Report main styling   ****************/
+.report_section{
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.report_section_main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.report_section1{
+    background-color: #ffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(100, 116, 139, 0.15);
+}
+
+.report_section1_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.report_section1_reportType{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.report_section1_reportType_buttons{
+    display: flex;
+    background-color: #efefef;
+    gap: 4px;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.report_section1_reportType_buttons button{
+    width: 50%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 450;
+}
+
+
+#report_sec1_btn_active{
+    background-color:#f9fafb ;
+}
+
+
+.period_exportFormat{
+    display: flex;
+   
+    gap: 20px;
+}
+
+.period_section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exportFormat_section{
+    width: 50%;
+}
+
+
+.period_section_dropdown{
+    width: 100%;
+}
+
+
+.period_section_dropdown select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #efefef;
+}
+
+
+.exportFormat_section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exportFormat_section_dropdown{
+    width: 100%;
+}
+
+.exportFormat_section_dropdown select{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efefef;
+}
+
+
+.start_end_date{
+    display: flex;
+    gap: 20px;
+}
+
+.start_date_section{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 50%;
+}
+
+.end_date_section{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 50%;
+}
+
+.start_date_section input{
+    padding: 10px;
+    border: none;
+    background-color: #efefef;
+    border-radius: 5px;
+}
+
+.end_date_section input{
+    padding: 10px;
+    border: none;
+    background-color: #efefef;
+    border-radius: 5px;
+}
+
+
+.generate_section{
+    width: 100%;
+}
+
+.generate_section button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: #ffff;
+    background-color: #006fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.generate_section button i{
+    margin-right: 15px;
+}
+
+.generate_section button:hover{
+    background-color: #2463EB;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.report_section2{
+    background-color: #ffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(100, 116, 139, 0.15);
+}
+
+
+.report_section2_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.report_section2_main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.report_sec1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1.5px solid #efefef;
+}
+
+.report_sec1_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.report_sec2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1.5px solid #efefef;
+}
+
+.report_sec2_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.report_sec3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1.5px solid #efefef;
+}
+
+.report_sec3_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.report_sec1_heading h3{
+    font-size: 18px;
+}
+
+.report_sec1_heading p{
+    font-size: 14px;
+}
+
+.report_sec2_heading h3{
+    font-size: 18px;
+}
+
+.report_sec2_heading p{
+    font-size: 14px;
+}
+
+.report_sec3_heading h3{
+    font-size: 18px;
+}
+
+.report_sec3_heading p{
+    font-size: 14px;
+}
+
+
+.report_section2 button{
+    padding: 10px 15px 10px 15px;
+    border: none;
+    color: #ffff;
+    border-radius: 5px;
+    background-color: #006fff;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+
+.report_section2 button:hover{
+    background-color: #0061dd;
+}
+
+
+.report_section p{
+    color: #64748b;
+}
+
+
+
+
+
+
+
+
+
+
+
+/********************  Recent attendance and employee info data ********************/
+#recent_attendance{
+   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem  2rem 2rem;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    
+
+}
+
+
+#recent_attendance_filter{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+#search_filter{
+    display: flex;
+    gap: 10px;
+}
+
+#search_filter input{
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+    background-color: #f9fafb;
+    border: 0.1px solid rgba(100, 116, 139, 0.25);
+    gap: 10px;
+}
+
+#search_employee{
+    width: 18rem;
+    height: 1rem;
+    border-radius: 6px;
+    border-color: black;
+}
+
+
+#export_btn{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: #f9fafb;
+    border: 0.1px solid rgba(100, 116, 139, 0.25);
+    border-radius: 6px;
+   
+    cursor: pointer;
+}
+
+
+
+
+
+table{
+    width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+thead{
+    border: 1px solid #cccccc;
+    color: #64748b;
+}
+
+thead th{
+    font-weight: 500;
+}
+
+tbody tr{
+    border: 1px solid #cccccc;
+}
+
+th, td{
+    text-align: center;
+    padding: 12px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+
+.status_cell{
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.status_cell_color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #EAB308;
+}
+
+
+
+.all_records{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#view_all_records_btn{
+    padding: 12px 14px 12px 14px;
+    border-radius: 10px;
+    background-color: #f9fafb;
+    border: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    color: #2463EB;
+    font-size: 15px;
+}
+
+#view_all_records_btn:hover{
+    background-color: #f59e0b;
+    color: black;
+}
+
+
+
+#search_filter select{
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+    background-color: #f9fafb;
+    border: 0.1px solid rgba(100, 116, 139, 0.25);
+    gap: 10px;
+    border-radius: 7px;
+}

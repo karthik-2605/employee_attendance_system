@@ -1,0 +1,666 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f9fafb;
+    font-family: ui-sans-serif;
+}
+
+
+/* Dashboard styling */
+
+#nav{
+    background-color: #ffff;
+    width: 100%;
+    height: 4rem;
+    box-shadow: 0px 0.1px #64748b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #006fff;
+}
+
+#logo{
+    padding: 0 5rem;
+    cursor: pointer;
+}
+
+#headings{
+    width: 80%;
+    color: black;
+}
+
+#headings ul{
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+#headings ul li{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 10px;
+    transition: 0.3s ease-in-out;
+    padding:13px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#headings ul li:hover{
+    background-color: #f59e0b;
+}
+
+#headings ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16.5px;
+
+}
+
+#right_section{
+    padding: 0 5rem 0 0;
+    display: flex;
+    gap: 20px;
+}
+
+#right_section button{
+    font-size: 0.9rem;
+    padding: 15px 17px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f9fafb;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 2px solid #f9fafb;
+}
+
+#right_section button:hover{
+    background-color: #f59e0b;
+}
+
+
+
+
+
+
+
+
+/***************************   Dashboard styling   *****************************/
+
+
+#dashboard{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 26.5rem;
+}
+
+#dashboard h1{
+    margin-left: 6px;
+}
+
+.dashboard_heading{
+    margin: 25px 0;
+}
+
+#dashboard_items{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    
+}
+
+
+
+/* Daily Attendance check in */
+
+
+.daily_attendance_checkin{
+    padding: 20px 50px;
+    display: grid;
+    gap: 30px;
+    background-color: #ffff;
+    border-radius: 15px;
+    border: 2px solid #f9fafb;
+    box-shadow: 0 0px 5px rgba(100, 116, 139, 0.15);
+
+}
+
+.checkin_heading{
+    display: grid;
+    gap: 10px;
+    
+}
+
+.checkin_heading p{
+    color:#64748b;
+}
+
+
+.checkin_logo{
+    text-align: center;
+    color: #006fff;
+}
+
+.checkin_logo i{
+    font-size: 2rem;
+    background-color: #f9fafb;
+    padding: 10px;
+    border-radius: 50%;
+    border: 5px solid #f9fafb;
+}
+
+.checkin_start_end{
+    display: flex;
+    gap: 9.5rem;
+}
+
+.checkin_time{
+    width: 80px;
+}
+
+
+.checkin_out{
+    width: 80px;
+}
+
+.checkin_p{
+    color: #64748b;
+}
+
+.checkin_btn button{
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    background-color: #006fff;
+    color: #ffff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+/*************   Today's attendance   **************/
+
+
+#currentAttendance{
+    padding: 20px 50px;
+    display: grid;
+    gap: 30px;
+    background-color: #ffff;
+    border-radius: 15px;
+    border: 2px solid #f9fafb;
+    box-shadow: 0 0px 5px rgba(100, 116, 139, 0.15);
+
+}
+
+.currentAttendanceChecking{
+    display: grid;
+    gap: 10px;
+}
+
+.current_attendance_heading p{
+    margin-top: 10px;
+    color:#64748b;
+}
+
+.tracker{
+    display: grid;
+    gap: 20px;
+}
+
+
+.tracker_present{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tracker_present .tracker_heading{
+    display: flex;
+    gap: 20px;
+}
+.tracker_present .tracker_heading .percentage{
+    margin-left: 135px;
+}
+.tracker_bar_present{
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #f6f6f7;
+    position: relative;
+    overflow: hidden;
+}
+
+.tracker_bar_present .fill_bar{
+    height: 100%;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    border-radius: 10px;
+    background-color: #006fff;
+}
+
+
+
+
+.tracker_late{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tracker_late .tracker_heading{
+    display: flex;
+    gap: 20px;
+}
+.tracker_late .tracker_heading .percentage{
+    margin-left: 156px;
+}
+.tracker_bar_late{
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #f6f6f7;
+    position: relative;
+    overflow: hidden;
+}
+
+.tracker_bar_late .fill_bar{
+    height: 100%;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    border-radius: 10px;
+    background-color: #006fff;
+}
+
+
+
+
+
+.tracker_absent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tracker_absent .tracker_heading{
+    display: flex;
+    gap: 20px;
+}
+
+.tracker_absent .tracker_heading .percentage{
+    margin-left: 137px;
+}
+.tracker_bar_absent{
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #f6f6f7;
+    position: relative;
+    overflow: hidden;
+}
+
+.tracker_bar_absent .fill_bar{
+    height: 100%;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    border-radius: 10px;
+    background-color: #006fff;
+}
+
+
+
+
+
+
+
+
+.dot{
+    margin-top: 2.5px;
+    height: 13px;
+    width: 13px;
+    background-color: #006fff;
+    border-radius: 50%;
+}
+.green_dot{
+    background-color: #22c55e;
+}
+.yellow_dot{
+    background-color: #eab308;
+}
+.red_dot{
+    background-color: #ef4444;
+}
+
+
+
+
+
+
+
+.total_count_emp{
+    display: flex;
+    justify-content: space-between;
+    gap: 12rem;
+}
+.total_count_emp p{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+
+
+
+
+
+/************************** Count of Employees section **********************/
+
+
+#countEmp{
+    display: flex;
+    gap: 10px;
+
+}
+
+
+.countOfEmployeescls{
+    background-color: #ffff;
+    border-radius: 10px;
+    height: 5rem;
+    padding: 20px;
+    border: 2px solid #f1f5f9;
+    box-shadow: 0 0px 5px rgba(100, 116, 139, 0.15);
+
+}
+
+#total_emp p{
+    color: #64748b;
+}
+
+
+
+#countEmp p:nth-child(2){
+    margin-top: 10px;
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 200;
+}
+
+
+
+#total_emp div{
+    margin-top: 10px;
+}
+#present_emp div{
+    margin-top: 10px;
+}
+#absent_emp div{
+    margin-top: 10px;
+}
+
+
+
+
+#countEmp p{
+    font-size: 1rem;
+}
+
+
+
+
+#present_emp p{
+    color: #64748b;
+}
+
+#absent_emp p{
+    color: #64748b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************   Attendance analytics styling   **********************/
+
+#attendance_analytics{
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem  2rem 2rem;
+    height: 28rem;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(100, 116, 139, 0.15);
+    margin-bottom: 2rem;
+
+}
+
+#attendance_analytics_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#attendance_analytics_buttons{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: fit-content;
+    padding: 7px;
+    background-color: #f1f5f9;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+
+}
+
+#monthly_trend_btn{
+    background-color: #ffff;
+    color:#2463EB;
+}
+
+#attendance_analytics_buttons button{
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+
+#attendance_analytics_heading p{
+    color:#64748B;
+}
+
+
+
+.container{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/********************  Recent attendance and employee info data ********************/
+#recent_attendance{
+   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem  2rem 2rem;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    
+
+}
+
+
+#recent_attendance_filter{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+#search_filter{
+    display: flex;
+    gap: 10px;
+}
+
+#search_filter input{
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+    background-color: #f9fafb;
+    border: 0.1px solid rgba(100, 116, 139, 0.25);
+    gap: 10px;
+}
+
+#search_employee{
+    width: 18rem;
+    height: 1rem;
+    border-radius: 6px;
+    border-color: black;
+}
+
+
+#export_btn{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: #f9fafb;
+    border: 0.1px solid rgba(100, 116, 139, 0.25);
+    border-radius: 6px;
+   
+    cursor: pointer;
+}
+
+
+
+
+
+table{
+    width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+thead{
+    border: 1px solid #cccccc;
+    color: #64748b;
+}
+
+thead th{
+    font-weight: 500;
+}
+
+tbody tr{
+    border: 1px solid #cccccc;
+}
+
+th, td{
+    text-align: center;
+    padding: 12px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+
+.status_cell{
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.status_cell_color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #EAB308;
+}
+
+
+
+.all_records{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#view_all_records_btn{
+    padding: 12px 14px 12px 14px;
+    border-radius: 10px;
+    background-color: #f9fafb;
+    border: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    color: #2463EB;
+    font-size: 15px;
+}
+
+#view_all_records_btn:hover{
+    background-color: #f59e0b;
+    color: black;
+}
+
+
+
+
+
+
+#search_filter_search_btn{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: #f9fafb;
+    border: 0.1px solid rgba(100, 116, 139, 0.25);
+    border-radius: 6px;
+    color: #006fff;
+    cursor: pointer;
+}
+
+
+

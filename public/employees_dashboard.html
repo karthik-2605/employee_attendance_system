@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+
+    <!-- Nav bar secton -->
+     <div class="navbar" id="nav">
+        <div class="logo_section" id="logo">
+            <h2>EmployeeTrack</h2>
+        </div>
+
+        <div class="headings_section" id="headings">
+            
+        </div>
+
+        <div class="profile_exit_section" id="right_section">
+            <button><a href="#"><i class="fa-solid fa-user"></i></a></button>
+            <button><a href="#"><i class="fa-solid fa-right-from-bracket"></i></a></button>
+        </div>
+
+     </div> 
+
+
+     <!--Dashboard Container-->
+     <div class="dashboard_container" id="dashboard">
+        <h2 class="dashboard_heading">Dashboard</h2>
+        <div class="dashboard_contents" id="dashboard_items">
+
+
+
+            <div class=" dashboardContainerItemscm daily_attendance_checkin" id="checkin">
+                <div class="checkin_heading">
+                    <h3>Daily Attendance</h3>
+                    <p>Wednesday, April 30, 2025</p>
+                </div>
+
+                <div class="checkin_logo">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <div class="checkin_start_end">
+                    <div class="checkin_time">
+                        <p class="checkin_p">Check in</p>
+                        <p>--:--:--</p>
+                    </div>
+
+                    <div class="checkin_out">
+                        <p class="checkin_p">Check out</p>
+                        <p>--:--:--</p>
+                    </div>
+                </div>
+
+
+                <div class="checkin_btn">
+                    <button>Check In</button>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="dashboardContainerItemscm current_attendance" id="currentAttendance">
+                    <div class="current_attendance_heading">
+                        <h3>Overall Attendance</h3>
+                        <p>Wednesday, April 30, 2025</p>
+                    </div>
+
+
+
+
+
+                    <div class="tracker">
+                        <div class="tracker_present">
+
+                            <div class="tracker_heading">
+                                <div class="green_dot dot">
+
+                                </div>
+
+                                <h4>Present</h4>
+
+                                <div class="percentage">percentage</div>
+
+                            </div>
+
+                            <div class="tracker_bar_present">
+                                <div class="fill_bar"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="tracker_late">
+
+                            <div class="tracker_heading">
+                                <div class="yellow_dot dot">
+
+                                </div>
+
+                                <h4>Late</h4>
+
+                                <div class="percentage">percentage</div>
+
+                            </div>
+
+                            <div class="tracker_bar_late">
+                                <div class="fill_bar"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="tracker_absent">
+
+                            <div class="tracker_heading">
+                                <div class="red_dot dot">
+
+                                </div>
+
+                                <h4>Absent</h4>
+
+                                <div class="percentage">percentage</div>
+
+                            </div>
+
+                            <div class="tracker_bar_absent">
+                                <div class="fill_bar"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="total_count_emp">
+                        <h4>Total working days</h4>
+                        <p>6</p>
+
+                    </div>
+            </div>
+
+
+
+
+
+            <div class="dashboardContainerItemscm countOfEmployees" id="countEmp">
+                <div class="countOfEmployeescls total_employees" id="total_emp">
+                    <p>Total Days</p>
+                    <p class="total_emp_cnt">6</p>
+                </div>
+
+                <div class="countOfEmployeescls present_today" id="present_emp">
+                    <p>Present</p>
+                    <p class="present_emp_cnt">5</p>
+                </div>
+
+                <div class="countOfEmployeescls absent_today" id="absent_emp">
+                    <p>Absent</p>
+                    <p class="absent_emp_cnt">1</p>
+                </div>
+
+            </div>
+
+        </div>
+
+     </div>
+
+
+
+
+
+
+
+
+
+     <!--Attendance Analytics section-->
+     <div class="attendance_analytics_section" id="attendance_analytics">
+        <div class="attendance_analytics_section_heading" id="attendance_analytics_heading">
+            <h3>Attendance Analytics</h3>
+            <p>View attendance patterns and trends</p>
+
+        </div>
+
+
+        <div class="attendance_analytics_section_buttons" id="attendance_analytics_buttons">
+            <button id="monthly_trend_btn">Monthly Trend</button>
+            <button id="by_department_btn">By Department</button>
+
+        </div>
+
+
+        <div class="attendance_analytics_section_charts">
+            <canvas id="attendanceChart" width="1200" height="325" style="display: block;"></canvas>
+            <canvas id="attendanceChartBarGraph" width="1200" height="325" style="display: none;"></canvas>
+        </div>
+
+     </div>
+
+
+
+
+
+
+
+
+
+     <!------------     Recent attendance list of Employees     --------->
+
+
+     <div id="recent_attendance">
+        <div id="recent_attendance_heading">
+            <h3>Recent Attendance</h3>
+
+        </div>
+
+
+        <div id="recent_attendance_filter">
+            <div id="search_filter">
+               
+            </div>
+
+            <div class="export_pdf_excel">
+                <button id="export_btn"><i class="fa-solid fa-download"></i>Export</button>
+            </div>
+        </div>
+
+
+
+        <div id="employee_info">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Date</th>
+                        <th>Check In</th>
+                        <th>Check Out</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>02 May 2025</td>
+                        <td>9:54 AM</td>
+                        <td>5:14 PM</td>
+                        <td>
+                            <div class="status_cell">
+                                <div class="status_cell_color">
+
+                                </div>
+
+                                <span>Late</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="all_records">
+            <button id="view_all_records_btn">View All Records</button>
+
+        </div>
+
+    </div>
+
+     <script src="./app.js"></script>
+    
+</body>
+</html>

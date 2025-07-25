@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container_signup">
+        <div class="container_signup_div">
+            <div class="signup_heading">
+                <h1>Sign up</h1>
+            </div>
+
+            <div class="submit_form">
+                <form id="signup_form">
+
+                    <label for="email">Enter email:</label>
+                    <input type="email" name="email" id="email_emp" placeholder="Enter email">
+
+                    <label for="psw">Enter Password:</label>
+                    <input type="password" class="text_input" name="password" id="psw" placeholder="Enter password" required>
+
+                    <label for="psw">Confirm Password:</label>
+                    <input type="password" class="text_input" name="confirm_password" id="confirm_psw" placeholder="Enter password" required>
+
+                    <button type="submit" id="continue_btn">Create Account</button>
+                </form>
+            </div>
+
+            <div class="createNew">
+                <p>Already have an account? <a href="./login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("continue_btn").addEventListener('click',async function(e){
+    e.preventDefault();
+
+    const email = document.getElementById('email_emp').value;
+    const password = document.getElementById('psw').value;
+    const confirm_password = document.getElementById('confirm_psw').value;
+
+    console.log(email);
+    console.log(password);
+    console.log(confirm_password);
+
+    const response = await fetch('/signup',{
+        method: "POST",
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({email,password,confirm_password})
+    });
+
+    const result = await response.json();
+
+    if(response.ok){
+        alert(result.message);
+        console.log("entered response.ok");
+        window.location.href = result.redirect;
+    }else{
+        alert(result.error);
+        if(result.redirect){
+            window.location.href = result.redirect;
+        }
+    }
+})
+</script>
+</html>
